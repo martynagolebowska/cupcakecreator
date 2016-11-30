@@ -1,0 +1,30 @@
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        
+        width:($i /12) * 100%
+    }
+}
+
+.row:before, .row:after{
+    display: table;
+    content:'';
+    clear: both;
+}
+
+.row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+[class*=col-] {
+    float: left;
+    min-height: 1px;
+}
+
+/*@media (max-width:800px),(orientation: portrait){
+    [class*='col-'] {
+    float: none;
+    width: 100%;
+    }
+}*/

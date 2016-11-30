@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupcake recipe creator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+<body>
+    
+    <header class ='header'>
+        <div class='container'>
+            <div class='creatorLogo'>
+                cupcake creator
+            </div>
+
+            <div class='scrollDownBox'>
+                <div class='scrollDown pointer'></div>
+            </div>
+        </div>
+    </header>
+    
+    <section class='section1'>
+        <div class='container'>
+            <div class='row'>
+                <div class='section1-title animated bounceInRight'>
+                    choose a cake
+                </div>
+            </div>
+            <div class='rowCupcake'>
+                <div class='cupcakeBox col-4'>
+                    <div class='cupcake chocolate' data-flavour='chocolate'>
+                        <div class='cupcakeCheck'></div>
+                    </div>
+                    
+                </div>
+                <div class='cupcakeBox col-4'>
+                    <div class='cupcake lemon' data-flavour='lemon'>
+                        <div class='cupcakeCheck'></div>
+                    </div>
+                </div>
+                <div class='cupcakeBox col-4'>
+                    <div class='cupcake hazelnut' data-flavour='hazelnut'>
+                        <div class='cupcakeCheck'></div>
+                    </div>
+                </div>
+                
+            </div> 
+        </div>    
+    </section>
+    
+    <section class='section2'>
+        <div class='container'>
+            <div class='row'>
+                <div class='section2-title animated bounceInLeft'>
+                    choose the filling
+                </div>
+            </div>
+            <div class='row'>
+                        <div class='cupcakeBox col-4'>
+                            <div class='cupcake'>
+                                <div class='cupcakeFilling'></div>
+                            </div>
+                        </div>
+                <div class='secondBox col-8' >
+                    <div class='spoonBox col-4 animated fadeInUp'>
+                        <div class ='spoonInfo'>[i'm cherry jam]</div>
+                        <div class ='spoonSelect'>pick me!</div>
+                        <div class='spoonTop cherry' data-flavour='cherry'></div>
+                        <div class='spoonBottom'></div>
+                    </div>
+                    <div class='spoonBox col-4 animated fadeInUp'>
+                        <div class ='spoonInfo'>[i'm peanut butter]</div>
+                        <div class ='spoonSelect'>pick me!</div>
+                        <div class='spoonTop peanut' data-flavour='peanut'></div>
+                        <div class='spoonBottom'></div>
+                    </div>
+                    <div class='spoonBox col-4 animated fadeInUp'>
+                        <div class ='spoonInfo'>[i'm white chocolate]</div>
+                        <div class ='spoonSelect'>pick me!</div>
+                        <div class='spoonTop whitechoc' data-flavour='whitechoc'></div>
+                        <div class='spoonBottom'></div>
+                    </div>
+                </div> 
+           </div>   
+        </div>
+    </section>
+    
+    <section class='section3'>
+        <div class='container'>
+            <div class='row'>
+                <div class='section3-title animated bounceInRight'>
+                    pick the frosting
+                </div>
+            </div>
+            
+            <div class='row'>
+                
+                <div class='frostingBox col-8'>
+                    <div class='circleBox col-4 animated fadeInUp'>
+                        <div class='frostingCircle choco' data-flavour='choco'>
+                            <div class='frostingCheck'></div>
+                            <div class='descBar'>[chocolate]</div>
+                        </div>
+                    </div>
+                    <div class='circleBox col-4 animated fadeInDown'>
+                        <div class='frostingCircle meringue' data-flavour='meringue'>
+                            <div class='frostingCheck'></div>
+                            <div class='descBar'>[meringue]</div>
+                        </div>
+                    </div>
+                    <div class='circleBox col-4 animated fadeInUp'>
+                        <div class='frostingCircle raspberry' data-flavour='raspberry'>
+                            <div class='frostingCheck'></div>
+                            <div class='descBar'>[raspberry]</div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <div class='frostingCupcake col-4'>
+                    
+                     <div class='frosting'>
+                        <div class='frostingA'></div>
+                        <div class='frostingS'></div>
+                        <div class='frostingM'></div>
+                        <div class='frostingL'></div>
+                    </div>
+                
+                    <div class='cupcakeBox'>
+                        <div class='cupcake'>
+                            <div class='cupcakeFilling'></div>
+                        </div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class='section4'>
+        <div class='container'>
+            
+            <div class='getRec'>
+                <div class='recBtn'> get the recipe </div>
+                <div class='pointer'></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class='section5'>
+        <div class='container'>
+            
+            <div class='RecBox'>
+                <div class='row'>
+                    <div class='RecImg col-6'>
+                    </div>
+                    <div class='RecList col-6'>
+                    </div>
+                </div>
+                <div class='row'>
+                </div>
+            </div> 
+        </div>
+    </section>
+    
+</body>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</html>

@@ -1,0 +1,216 @@
+.section3-title {
+    font-size: 19px;
+    color: var(--mainColor);
+    width: 100%;
+    height: 40px;
+    border-bottom: 4px double var(--mainColor);
+    border-top: 4px double var(--mainColor);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.frostingBox {
+    margin-top: 120px;
+    
+    @media (max-width: 960px){
+        float:none;
+        margin: 0 auto;
+    }
+}
+
+.circleBox {
+    @media (max-width: 960px){
+        margin: 0 auto;
+        transform: scale(0.55);
+    }
+    
+    @media (max-width: 515px){
+        margin: 0 auto;
+        transform: scale(0.45);
+    }
+}
+
+.frostingCircle {
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--mainColor);
+    border-radius: 50%;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    
+    .descBar {
+        width:100%;
+        height:45%;
+        margin-top:185px;
+        color: var(--mainColor);
+        text-align: center;
+        font-size: 22px;
+        padding: 18px;
+    }
+        
+    .frostingCheck {
+        width: 35%;
+        height: 35%;
+        background-image: url(../svg/success.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 33%;
+        top: 33%;
+    }
+    
+}
+
+.choco {
+    background-image: url(../images/chocofromini.jpg);
+}
+
+.meringue {
+    background-image: url(../images/meringuefromini.jpg);
+}
+
+.raspberry {
+    background-image: url(../images/strawberryfromini.jpg);
+}
+
+
+.section3 {
+    .cupcakeFilling {
+        border: 7px solid var(--mainColor);
+    }
+}
+
+
+.frosting {
+    width: 100%;
+    height: 211px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-left: 16%;
+    margin-bottom: -78px;
+    
+    @media (max-width:975px){
+        transform: scale(0.9);
+        margin-bottom: -89px;
+    }
+    
+     @media (max-width:865px){
+        transform: scale(0.9);
+        margin-bottom: -89px;
+    }   
+     
+}
+
+.frostingCupcake {
+
+     @media (max-width:770px){
+            width:51%;
+            margin-top: -67px;
+            margin-left: 23%;
+        }
+    
+     @media (max-width: 960px){
+        float:none;
+        margin: 0 auto;
+    }
+}
+
+.frostingL {
+    width: 71%;
+    height: 38%;
+    border-radius: 48px;
+    margin: 0 auto;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 0;
+    top: 62%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+     @media (max-width: 875px){
+        height: 32%;
+        top: 67%;
+    }
+}
+
+.frostingM {
+    width: 53%;
+    height: 64%;
+    border-radius: 150px 150px 48% 48%;
+    margin: 0 auto;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 13%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+     @media (max-width: 875px){
+        top: 24%;
+    }
+}
+
+.frostingS {
+    width: 36%;
+    height: 35%;
+    border-radius: 48px;
+    margin: 0 auto;
+    background-color: white;
+    position: absolute;
+    border-bottom-left-radius: 0;
+    top: -5%;
+    left: 9%;
+    z-index: 10;
+    
+    @media (max-width: 960px){
+        top: -4%;
+    
+    }
+    
+    
+    @media (max-width: 875px){
+        top: 11%;
+    }
+    
+    @media (max-width: 523px){
+        top: 12%;
+    }
+    
+}
+
+.frostingA {
+    width: 60%;
+    height: 34%;
+    border-radius: 48px;
+    position: absolute;
+    left: 7%;
+    top: 29%;
+    background-color: var(--mainColor);
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+     @media (max-width: 875px){
+        height: 25%;
+        top: 46%;
+    }
+    
+}
+
+.frostingCupcake {
+    .cupcakeBox {
+        width:100%;
+    }
+}
+
+

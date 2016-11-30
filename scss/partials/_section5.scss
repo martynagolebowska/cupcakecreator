@@ -1,0 +1,36 @@
+.section5 {
+    background-color: #374B5A;
+}
+
+.RecBox {
+    width:90%;
+    height: 600px;
+    border: 6px double white;
+    margin: 5%;
+    
+    @media (max-width:460px){
+        width: 90%;
+        height: 500px;
+        margin: 5%;
+    }
+    
+    @media (min-width:900px){
+        width: 800px;
+        height: 600px;
+        margin: 5% auto;
+    }
+    
+    .row {
+        height: 100%;
+    }
+}
+
+.RecImg {
+    height: 70%;
+    border:1px solid black;
+}
+
+.RecList{
+    height: 70%;
+    border:1px solid black;
+}

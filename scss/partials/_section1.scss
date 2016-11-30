@@ -1,0 +1,84 @@
+
+.section1-title {
+    font-size: 19px;
+    color: var(--mainColor);
+    width: 100%;
+    height: 40px;
+    border-bottom: 4px double var(--mainColor);
+    border-top: 4px double var(--mainColor);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-bottom: -45px;
+    margin-top: 30px;
+}
+
+
+.cupcakeBox {
+    position: relative;
+    height: 350px;
+    perspective: 300px;
+    transform: rotateX(180deg);
+    width: 33%;
+   
+    .cupcake {
+        transform: rotateX(45deg) scale(0.6) rotate(180deg);
+        border-radius: 20px;
+        border: 7px solid var(--mainColor);
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
+    
+    
+    @media (max-width:725px){
+        width: 51%;
+        margin: 0 auto;
+        float: none;
+        height: 200px;
+        
+        .cupcake {
+            height: 190%;
+            position: absolute;
+            bottom: -34px;
+        }
+    }
+    
+    @media (max-width: 500px){
+        width:70%;
+    }
+    
+   
+    
+}
+
+.chocolate {
+    background-image: url(../images/chocolatemini.jpg);
+    
+}
+
+.lemon {
+    background-image: url(../images/lemonmini.jpg);
+}
+
+.hazelnut {
+    background-image: url(../images/hazelnutsmini.jpg);
+}
+
+
+
+.cupcakeCheck {
+    width: 100px;
+    height: 100px;
+    background-image: url(../svg/success.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    position: absolute;
+    left: 38%;
+    top: 16%;
+}

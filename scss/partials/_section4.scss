@@ -1,0 +1,35 @@
+.section4 {
+    background-color: #374B5A;
+}
+
+.getRec{
+    background-color: #374B5A;
+    width:100%;
+    height: 200px;
+    position: relative;
+}
+
+.recBtn {
+    height: 100px;
+    width: 330px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    border: 6px double white;
+    padding: 30px;
+    margin: 7% auto;
+    
+}
+
+.pointer {
+    width: 50px;
+    height: 50px;
+    border-bottom: 6px double white;
+    border-right: 6px double white;
+    left: 47%;
+    transform: rotate(45deg);
+    margin: 4% auto;
+    margin-top: -5%;
+}
+
