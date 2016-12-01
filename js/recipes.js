@@ -22,7 +22,8 @@ cakeIngrid[1]=[
     '4 eggs, at room temperature',
     '2 tablespoons lemon zest',
     '1 cup whole milk',
-    '2 1/2 tablespoons fresh lemon juice'  
+    '2 1/2 tablespoons fresh lemon juice',
+    '1 teaspoon pure vanilla extract'
 ];
 
 //hazelnut cupcake
@@ -65,6 +66,8 @@ fillingIngrid[0]=[
     '1/4 teaspoon pure vanilla extract'
 ];
 
+
+
 //peanut butter
 fillingIngrid[1]=[
     '1 cup creamy peanut butter',
@@ -85,7 +88,7 @@ var fillingRecipe = [];
 
 //white chocolate
 fillingRecipe[0]=
-    'In the top of a double boiler, combine the white chocolate and milk. Bring to a simmer and cook, stirring, until the chocolate is melted. Let cool to room temperature. In a bowl, beat the cream cheese, and vanilla. Gradually add the cooled chocolate and beat until smooth. Chill in the refrigerator for 2 hours before filling cupcakes. Use to fill the chocolate cupcakes as directed.'
+    ['In the top of a double boiler, combine the white chocolate and milk. Bring to a simmer and cook, stirring, until the chocolate is melted. Let cool to room temperature. In a bowl, beat the cream cheese, and vanilla. Gradually add the cooled chocolate and beat until smooth. Chill in the refrigerator for 2 hours before filling cupcakes. Use to fill the chocolate cupcakes as directed.'
 ];
 
 //peanut butter
@@ -118,10 +121,10 @@ frostingIngrid[1]=[
 ];
 
 frostingIngrid[2]=[
-    '3/4 cups (170g) unsalted butter, softened to room temperature',
-    '3 and 1/2 cups (420g) confectioners sugar',
-    '3 Tablespoons (45ml) heavy cream',
-    '1/2 cup (165g) thick raspberry preserves or jam'
+    '3/4 cups unsalted butter, softened to room temperature',
+    '3 and 1/2 cups confectioners sugar',
+    '3 Tablespoons heavy cream',
+    '1/2 cup thick raspberry preserves or jam'
 ];
 
 var frostingRecipe = [];
@@ -138,5 +141,5 @@ frostingRecipe[1]=[
 
 // raspberry frosting
 frostingRecipe[2]=[
-    'Beat softened butter on medium speed for about 3-4 minutes until completely smooth and creamy. Add the confectioners sugar, cream  with the mixer running. Increase to high speed and beat for 1 minute. Add the raspberry preserves and beat until thick and creamy, about 2 full minutes. Add more confectioners sugar if frosting is too thin, is separating (due to the fruity jam) or looks too wet. Pipe on chilled cupcakes'
+    'Beat softened butter on medium speed for about 3-4 minutes until completely smooth and creamy. Add the confectioners sugar, cream  with the mixer running. Increase to high speed and beat for 1 minute. Add the raspberry preserves and beat until thick and creamy, about 2 full minutes. Add more confectioners sugar if frosting is too thin, is separating (due to the fruity jam) or looks too wet. Pipe on chilled cupcakes.'
 ];

@@ -1,3 +1,6 @@
+.animated {
+    animation-fill-mode: none;
+}
 .section3-title {
     font-size: 19px;
     color: var(--mainColor);
@@ -164,12 +167,13 @@
     height: 35%;
     border-radius: 48px;
     margin: 0 auto;
-    background-color: white;
     position: absolute;
     border-bottom-left-radius: 0;
     top: -5%;
     left: 9%;
     z-index: 10;
+    
+    
     
     @media (max-width: 960px){
         top: -4%;
@@ -186,6 +190,10 @@
     }
     
 }
+
+.froSbck {
+        background-color: white;
+    }
 
 .frostingA {
     width: 60%;

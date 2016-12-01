@@ -1,40 +1,33 @@
 jQuery(document).ready(function(){
     
-    //Events for section 1
+//Events for section 1
     
     var cupcakeCheck = jQuery('.cupcakeCheck');
-    console.log(cupcakeCheck);
     
     cupcakeCheck.hide();
     
     var cupcakeSec1 = jQuery('.section1').find('.cupcake');
-    console.log(cupcakeSec1);
     
     cupcakeSec1.on('mouseover', function(){
-        
         jQuery(this).children().show();
     })
     
      cupcakeSec1.on('mouseleave', function(){
-      
         jQuery(this).children().hide();
     })
      
     
-    //Przypisanie tła cupcake z section 1 do section 2
+//Przypisanie tła cupcake z section 1 do section 2
      
     var cupcakeSec2 = jQuery('.section2').find('.cupcake');
-    console.log(cupcakeSec2);
     
     var cupcakeSec3 = jQuery('.section3').find('.cupcake');
-    console.log(cupcakeSec3);
     
     
+//wybranie smaku ciasta
     cupcakeCheck.on('click', function(){
-        console.log('działa mi klik');
         
         var flavour = jQuery(this).parent().data('flavour');
-        console.log(flavour);
         
        //przed dodaniem klasy z nowym tłem usuwam wszystkie        poprzednie. Można poprawci, zeby nie bazowac na sztywnych danych
      
@@ -51,15 +44,39 @@ jQuery(document).ready(function(){
         
         cupcakeSec3.addClass(flavour);
         
+//dodanie składników na ciasto do ostatniej sekcji
+        
+        var cakeIngList = jQuery('.cakeIngList');
+        var recipe = jQuery(this).parent().data('recipe');
+        
+        cakeIngrid[recipe].forEach(function(element, index, array){
+
+            var newLi = jQuery('<li></li>');
+            newLi.html(element).css('line-height', '25px');
+            
+            cakeIngList.append(newLi).css('list-style-type', 'circle').css('margin','5% 0 5% 5%');
+            
+        });
+        
+//dodanie instrukcji cupcakes do ostatniej sekcji
+        
+ var cakeInst = jQuery('.cakeInst');
+        
+        cakeRecipe[recipe].forEach(function(element, index, array){
+            
+            var newDiv = jQuery('<div></div>');
+            newDiv.html(element).css('margin','20px');
+            
+            cakeInst.append(newDiv);
+        });
+
     })
     
     //events for section 2
     
     var spoonInfo = jQuery('.spoonInfo').hide();
-    console.log(spoonInfo);
     
     var spoonSelect = jQuery('.spoonSelect');
-    console.log(spoonSelect);
     
     var cupcakeFilling = jQuery('.cupcakeFilling');
     
@@ -72,11 +89,8 @@ jQuery(document).ready(function(){
     })
     
     spoonSelect.on('click', function(){
-        console.log('pick me');
-        
         
         var flav = jQuery(this).next('.spoonTop').data('flavour');
-        console.log(flav);
         
         cupcakeFilling.removeClass('cherry');
         cupcakeFilling.removeClass('peanut');
@@ -84,20 +98,43 @@ jQuery(document).ready(function(){
         
         cupcakeFilling.addClass(flav);
         
+//dodanie składników na filling do ostatniej sekcji
+        
+        var fillingIngList = jQuery('.fillingIngList');
+        
+        var getFilData = jQuery(this).next().data('recipe');
+            
+        fillingIngrid[getFilData].forEach(function(element, index, array){
+
+            var newLi = jQuery('<li></li>');
+            newLi.html(element).css('line-height', '25px');
+      
+            fillingIngList.append(newLi).css('list-style-type', 'circle').css('margin','5% 0 5% 5%');        
+        });
+        
+//dodanie instrukcji fillingu do ostatniej sekcji
+        
+ var fillingInst = jQuery('.fillingInst');
+        
+        fillingRecipe[getFilData].forEach(function(element, index, array){
+            
+            var newDiv = jQuery('<div></div>');
+            newDiv.html(element).css('margin','20px');
+            
+            fillingInst.append(newDiv);
+        });
+        
     })
     
     //events for section 3
     
     var frostingCheck = jQuery('.frostingCheck');
-    console.log(frostingCheck);
     frostingCheck.hide();
     
     var descBar = jQuery('.descBar');
-    console.log(descBar);
     descBar.hide();
     
     var frostingCircle = jQuery('.frostingCircle');
-    console.log(frostingCircle);
     
     frostingCircle.on('mouseover', function(){
         jQuery(this).find('.frostingCheck').show();
@@ -113,7 +150,6 @@ jQuery(document).ready(function(){
     frostingCheck.on('click', function(){
         
         var frostFlav = jQuery(this).parent().data('flavour');
-        console.log(frostFlav);
         
         var frostingA = jQuery('.frosting').find('.frostingA');
         var frostingM = jQuery('.frosting').find('.frostingM');
@@ -128,11 +164,40 @@ jQuery(document).ready(function(){
         frostingM.addClass(frostFlav);
         frostingL.addClass(frostFlav);
         
+        
+//dodanie składników na frosting do ostatniej sekcji
+        
+        var frostIngList = jQuery('.frostIngList');
+        var getFroData = jQuery(this).parent().data('recipe');
+            
+        frostingIngrid[getFroData].forEach(function(element, index, array){
+
+            var newLi = jQuery('<li></li>');
+            newLi.html(element).css('line-height', '25px');
+            
+            frostIngList.append(newLi).css('list-style-type', 'circle').css('margin','5% 0 5% 5%'); 
+            
+        });
+        
+        
+//dodanie instrukcji frostingu do ostatniej sekcji
+        
+        var frostingInst = jQuery('.frostingInst');
+        
+        frostingRecipe[getFroData].forEach(function(element, index, array){
+              
+            var newDiv = jQuery('<div></div>');
+            newDiv.html(element).css('margin','20px');
+            
+            frostingInst.append(newDiv); 
+        });
+        
     })
+    
     
     //events for section 4 and 5
     
-    var section5 = jQuery('.section5').hide();
+    var section5 = jQuery('.section5');
     
     var recBtn = jQuery('.recBtn');
     
@@ -140,10 +205,65 @@ jQuery(document).ready(function(){
         
         section5.show();
         
+        
+        //copy the created cupcake from prev section
+        var cupcakeToClone = jQuery('.section3').find('.frostingCupcake');
+
+        var RecImg = jQuery('.RecImg');
+
+        var clonedCupcake= cupcakeToClone.clone();
+        clonedCupcake.appendTo(RecImg).css('width', '100%');
+        
+        //change the color of frosting element
+        var frostingS = clonedCupcake.find('.frostingS').addClass('newBckg');
+        
+        //change the position of frosting element
+        var frostingM = jQuery('.frostingM').css('z-index', '0');
+        
     })
+
+// Dodanie animacji
     
+var sec1tit = jQuery('.section1-title')
+  
+setTimeout(function(){
+
+var waypoint = new Waypoint({
+    element: sec1tit,
+    offset:'50%',
+    handler: function(direction) {
+        sec1tit.addClass('bounceInRight');
+    }
+})
     
+var waypoint1 = new Waypoint({
+    element: jQuery('.section2-title'), 
+    offset:'70%',
+    handler: function(direction) {
+        jQuery('.section2-title').addClass('bounceInLeft');
+    }
+})
+
+var spoonBox = jQuery('.spoonBox').hide();
+
+var waypoint2 = new Waypoint({
+    element: jQuery('.section2-title'), 
+    offset:'50%',
+    handler: function(direction) {
+        spoonBox.show().addClass('fadeInUp');
+    }
+})
+
+var waypoint3 = new Waypoint({
+    element: jQuery('.section3-title'), 
+    offset:'50%',
+    handler: function(direction) {
+        console.log('hello');
+        jQuery('.section3-title').addClass('bounceInRight');
+        jQuery('.circleBox').addClass('fadeInUp');
+    }
+})
     
-    
+  },3000);
     
 });

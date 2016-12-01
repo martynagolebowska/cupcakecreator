@@ -4,13 +4,11 @@
 
 .RecBox {
     width:90%;
-    height: 900px;
     border: 6px double white;
     margin: 5%;
     
     @media (max-width:460px){
         width: 90%;
-        height: 500px;
         margin: 5%;
     }
     
@@ -31,46 +29,44 @@
 
 .RecImg {
     height: 70%;
-    border:1px solid black;
+    margin: 6% auto;
 }
 
 .RecList{
     height: 70%;
-    border:1px solid black;
     
     .cakeList{
         height: 33%;
-        border:1px solid black;
     }
     
     .fillingList{
         height: 33%;
-        border:1px solid black;  
     }
     
     .frostingList{
         height: 33%;
-        border:1px solid black;
     }
+    
 }
 
 .instBox{
     height: 30%;
-    border:1px solid black;
-
+    margin: 4%;
+    line-height: 25px;
 
     .cakeInst{
         height: 33%;
-        border:1px solid black;
     }
 
     .fillingInst{
         height: 33%;
-        border:1px solid black;  
     }
 
     .frostingInst{
         height: 33%;
-        border:1px solid black;
     }
+}
+
+.newBckg {
+    background-color: #374B5A;
 }

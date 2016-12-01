@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Cupcake recipe creator</title>
+     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     
@@ -25,24 +26,24 @@
     <section class='section1'>
         <div class='container'>
             <div class='row'>
-                <div class='section1-title animated bounceInRight'>
+                <div class='section1-title animated'>
                     choose a cake
                 </div>
             </div>
             <div class='rowCupcake'>
                 <div class='cupcakeBox col-4'>
-                    <div class='cupcake chocolate' data-flavour='chocolate'>
+                    <div class='cupcake chocolate' data-flavour='chocolate' data-recipe="0">
                         <div class='cupcakeCheck'></div>
                     </div>
                     
                 </div>
                 <div class='cupcakeBox col-4'>
-                    <div class='cupcake lemon' data-flavour='lemon'>
+                    <div class='cupcake lemon' data-flavour='lemon' data-recipe="1">
                         <div class='cupcakeCheck'></div>
                     </div>
                 </div>
                 <div class='cupcakeBox col-4'>
-                    <div class='cupcake hazelnut' data-flavour='hazelnut'>
+                    <div class='cupcake hazelnut' data-flavour='hazelnut' data-recipe="2">
                         <div class='cupcakeCheck'></div>
                     </div>
                 </div>
@@ -54,7 +55,7 @@
     <section class='section2'>
         <div class='container'>
             <div class='row'>
-                <div class='section2-title animated bounceInLeft'>
+                <div class='section2-title animated'>
                     choose the filling
                 </div>
             </div>
@@ -65,22 +66,22 @@
                             </div>
                         </div>
                 <div class='secondBox col-8' >
-                    <div class='spoonBox col-4 animated fadeInUp'>
+                    <div class='spoonBox col-4 animated'>
                         <div class ='spoonInfo'>[i'm cherry jam]</div>
                         <div class ='spoonSelect'>pick me!</div>
-                        <div class='spoonTop cherry' data-flavour='cherry'></div>
+                        <div class='spoonTop cherry' data-flavour='cherry' data-recipe="2"></div>
                         <div class='spoonBottom'></div>
                     </div>
-                    <div class='spoonBox col-4 animated fadeInUp'>
+                    <div class='spoonBox col-4 animated'>
                         <div class ='spoonInfo'>[i'm peanut butter]</div>
                         <div class ='spoonSelect'>pick me!</div>
-                        <div class='spoonTop peanut' data-flavour='peanut'></div>
+                        <div class='spoonTop peanut' data-flavour='peanut' data-recipe="1"></div>
                         <div class='spoonBottom'></div>
                     </div>
-                    <div class='spoonBox col-4 animated fadeInUp'>
+                    <div class='spoonBox col-4 animated'>
                         <div class ='spoonInfo'>[i'm white chocolate]</div>
                         <div class ='spoonSelect'>pick me!</div>
-                        <div class='spoonTop whitechoc' data-flavour='whitechoc'></div>
+                        <div class='spoonTop whitechoc' data-flavour='whitechoc' data-recipe="0"></div>
                         <div class='spoonBottom'></div>
                     </div>
                 </div> 
@@ -91,7 +92,7 @@
     <section class='section3'>
         <div class='container'>
             <div class='row'>
-                <div class='section3-title animated bounceInRight'>
+                <div class='section3-title animated'>
                     pick the frosting
                 </div>
             </div>
@@ -99,20 +100,20 @@
             <div class='row'>
                 
                 <div class='frostingBox col-8'>
-                    <div class='circleBox col-4 animated fadeInUp'>
-                        <div class='frostingCircle choco' data-flavour='choco'>
+                    <div class='circleBox col-4 animated'>
+                        <div class='frostingCircle choco' data-flavour='choco' data-recipe="0">
                             <div class='frostingCheck'></div>
                             <div class='descBar'>[chocolate]</div>
                         </div>
                     </div>
-                    <div class='circleBox col-4 animated fadeInDown'>
-                        <div class='frostingCircle meringue' data-flavour='meringue'>
+                    <div class='circleBox col-4 animated '>
+                        <div class='frostingCircle meringue' data-flavour='meringue' data-recipe="1">
                             <div class='frostingCheck'></div>
                             <div class='descBar'>[meringue]</div>
                         </div>
                     </div>
-                    <div class='circleBox col-4 animated fadeInUp'>
-                        <div class='frostingCircle raspberry' data-flavour='raspberry'>
+                    <div class='circleBox col-4 animated'>
+                        <div class='frostingCircle raspberry' data-flavour='raspberry' data-recipe="2">
                             <div class='frostingCheck'></div>
                             <div class='descBar'>[raspberry]</div>
                         </div>
@@ -124,7 +125,7 @@
                     
                      <div class='frosting'>
                         <div class='frostingA'></div>
-                        <div class='frostingS'></div>
+                        <div class='frostingS froSbck '></div>
                         <div class='frostingM'></div>
                         <div class='frostingL'></div>
                     </div>
@@ -160,12 +161,18 @@
                     <div class='RecList col-6'>
                         <div class='cakeList'>
                             <h1>Cupcakes Ingredients:</h1>
+                            <ul class='cakeIngList'>
+                            </ul>
                         </div>
                         <div class='fillingList'>
                             <h1>Filling Ingredients:</h1>
+                            <ul class='fillingIngList'>
+                            </ul>
                         </div>
                         <div class='frostingList'>
                             <h1>Frosting Ingredients:</h1>
+                            <ul class='frostIngList'>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -188,5 +195,7 @@
     
 </body>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/recipes.js"></script>
 </html>
