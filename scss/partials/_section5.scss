@@ -4,7 +4,7 @@
 
 .RecBox {
     width:90%;
-    height: 600px;
+    height: 900px;
     border: 6px double white;
     margin: 5%;
     
@@ -15,13 +15,17 @@
     }
     
     @media (min-width:900px){
-        width: 800px;
-        height: 600px;
+        width: 900px;
+        height: 100%;
         margin: 5% auto;
     }
     
     .row {
         height: 100%;
+    }
+    
+    h1 {
+        font-size: 20px;
     }
 }
 
@@ -33,4 +37,40 @@
 .RecList{
     height: 70%;
     border:1px solid black;
+    
+    .cakeList{
+        height: 33%;
+        border:1px solid black;
+    }
+    
+    .fillingList{
+        height: 33%;
+        border:1px solid black;  
+    }
+    
+    .frostingList{
+        height: 33%;
+        border:1px solid black;
+    }
+}
+
+.instBox{
+    height: 30%;
+    border:1px solid black;
+
+
+    .cakeInst{
+        height: 33%;
+        border:1px solid black;
+    }
+
+    .fillingInst{
+        height: 33%;
+        border:1px solid black;  
+    }
+
+    .frostingInst{
+        height: 33%;
+        border:1px solid black;
+    }
 }
