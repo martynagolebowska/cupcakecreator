@@ -197,7 +197,7 @@ jQuery(document).ready(function(){
     
     //events for section 4 and 5
     
-    var section5 = jQuery('.section5');
+    var section5 = jQuery('.section5').hide();
     
     var recBtn = jQuery('.recBtn');
     
@@ -230,7 +230,7 @@ setTimeout(function(){
 
 var waypoint = new Waypoint({
     element: sec1tit,
-    offset:'50%',
+    offset:'40%',
     handler: function(direction) {
         sec1tit.addClass('bounceInRight');
     }
@@ -238,7 +238,7 @@ var waypoint = new Waypoint({
     
 var waypoint1 = new Waypoint({
     element: jQuery('.section2-title'), 
-    offset:'70%',
+    offset:'60%',
     handler: function(direction) {
         jQuery('.section2-title').addClass('bounceInLeft');
     }
@@ -248,7 +248,7 @@ var spoonBox = jQuery('.spoonBox').hide();
 
 var waypoint2 = new Waypoint({
     element: jQuery('.section2-title'), 
-    offset:'50%',
+    offset:'40%',
     handler: function(direction) {
         spoonBox.show().addClass('fadeInUp');
     }
@@ -256,7 +256,7 @@ var waypoint2 = new Waypoint({
 
 var waypoint3 = new Waypoint({
     element: jQuery('.section3-title'), 
-    offset:'50%',
+    offset:'40%',
     handler: function(direction) {
         console.log('hello');
         jQuery('.section3-title').addClass('bounceInRight');
