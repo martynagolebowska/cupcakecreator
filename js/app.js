@@ -49,6 +49,8 @@ jQuery(document).ready(function(){
         var cakeIngList = jQuery('.cakeIngList');
         var recipe = jQuery(this).parent().data('recipe');
         
+        cakeIngList.find('li').remove();
+            
         cakeIngrid[recipe].forEach(function(element, index, array){
 
             var newLi = jQuery('<li></li>');
@@ -60,7 +62,9 @@ jQuery(document).ready(function(){
         
 //dodanie instrukcji cupcakes do ostatniej sekcji
         
- var cakeInst = jQuery('.cakeInst');
+        var cakeInst = jQuery('.cakeInst');
+        
+        cakeInst.find('div').remove();
         
         cakeRecipe[recipe].forEach(function(element, index, array){
             
@@ -72,25 +76,34 @@ jQuery(document).ready(function(){
 
     })
     
-    //events for section 2
+//events for section 2
     
     var spoonInfo = jQuery('.spoonInfo').hide();
-    
     var spoonSelect = jQuery('.spoonSelect');
-    
     var cupcakeFilling = jQuery('.cupcakeFilling');
     
     spoonSelect.on('mouseover', function(){
-        jQuery(this).prev('.spoonInfo').show();
+        
+        
+        if (window.matchMedia("(max-width: 725px)").matches) {
+          jQuery(this).prev('.spoonInfo').hide();
+        } else {
+          jQuery(this).prev('.spoonInfo').show();
+        }  
+        
     })
     
     spoonSelect.on('mouseleave', function(){
-        jQuery(this).prev('.spoonInfo').hide();
+        
+        if (window.matchMedia("(max-width: 725px)").matches) {
+          jQuery(this).prev('.spoonInfo').hide();
+        } else {
+          jQuery(this).prev('.spoonInfo').hide();
+        }
+        
     })
     
     spoonSelect.on('click', function(){
-        
-        console.log('działaj mi');
         
         var flav = jQuery(this).next('.spoonTop').data('flavour');
         
@@ -105,6 +118,8 @@ jQuery(document).ready(function(){
         var fillingIngList = jQuery('.fillingIngList');
         
         var getFilData = jQuery(this).next().data('recipe');
+        
+        fillingIngList.find('li').remove();
             
         fillingIngrid[getFilData].forEach(function(element, index, array){
 
@@ -116,7 +131,8 @@ jQuery(document).ready(function(){
         
 //dodanie instrukcji fillingu do ostatniej sekcji
         
- var fillingInst = jQuery('.fillingInst');
+        var fillingInst = jQuery('.fillingInst');
+        fillingInst.find('div').remove();
         
         fillingRecipe[getFilData].forEach(function(element, index, array){
             
@@ -171,6 +187,8 @@ jQuery(document).ready(function(){
         
         var frostIngList = jQuery('.frostIngList');
         var getFroData = jQuery(this).parent().data('recipe');
+        
+        frostIngList.find('li').remove();
             
         frostingIngrid[getFroData].forEach(function(element, index, array){
 
@@ -185,6 +203,7 @@ jQuery(document).ready(function(){
 //dodanie instrukcji frostingu do ostatniej sekcji
         
         var frostingInst = jQuery('.frostingInst');
+        frostingInst.find('div').remove();
         
         frostingRecipe[getFroData].forEach(function(element, index, array){
               
@@ -310,5 +329,8 @@ $(window).scroll(function(e){
     parallax2();
 });
 
+    
+    
+    
     
 });

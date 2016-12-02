@@ -71,11 +71,10 @@
     margin: 12px auto;
     font-size: 20px;
     text-align: center;
-    padding: 4px;
-    
+     
     
     @media (max-width:725px){
-        display: none;
+        transform: rotate(90deg);
     }
 }
 
@@ -132,5 +131,7 @@
 .whitechoc {
     background-image: url(../images/whitechoc.jpg);
 }
+
+
 
 
