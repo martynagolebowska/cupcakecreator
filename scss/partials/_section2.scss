@@ -1,8 +1,9 @@
 .section2 {
-    background-image: url(../images/galaxymini.jpg);
+    background-image: url(../images/galaxymini.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
     
     .cupcake {
@@ -71,6 +72,7 @@
     font-size: 20px;
     text-align: center;
     padding: 4px;
+    
     
     @media (max-width:725px){
         display: none;

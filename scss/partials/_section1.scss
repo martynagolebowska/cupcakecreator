@@ -13,6 +13,12 @@
     margin-top: 30px;
 }
 
+.rowCupcake {
+    @media (max-width:725px){
+        margin-bottom: 30px;
+    }
+}
+
 
 .cupcakeBox {
     position: relative;

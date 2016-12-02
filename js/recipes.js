@@ -52,7 +52,7 @@ cakeRecipe[1]=[
 ];
 
 //hazelnut cupcake instruction
-cakeRecipe[1]=[
+cakeRecipe[2]=[
     'Preheat oven to 350 degrees. Line standard muffin tins with paper liners. In a food processor, pulse hazelnuts until finely ground (do not overprocess, or the nuts will turn into a paste). Into a mixing bowl, sift together both flours, baking powder, and salt. Whisk in the ground nuts. With an electric mixer on medium-high speed, cream butter and both sugars until smooth. Reduce speed to low. Add flour mixture in three batches, alternating with two additions of milk, and beating well after each. In another mixing bowl, with electric mixer on medium speed, whisk the egg whites until soft peaks form. In two additions, gently fold the egg whites into the batter. Divide batter evenly among lined cups, filling each three-quarters full. Bake, rotating tins halfway through, until a cake tester inserted in centers comes out clean, about 25 minutes. Transfer tins to wire racks to cool completely before removing cupcakes.'
 ];
 

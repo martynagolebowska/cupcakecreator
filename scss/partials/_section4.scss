@@ -33,3 +33,141 @@
     margin-top: -5%;
 }
 
+//tło z kropek
+
+.paralex {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.paralex1 {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.paralex2 {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.dot1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(179, 207,208);
+    left: 31%;
+    filter: blur(3px);
+    top: 40px;
+}
+
+.dot2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(100, 150,172);
+    left: 13%;
+    filter: blur(3px);  
+}
+
+.dot3{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(47, 64,89);
+    left: 50%;
+    filter: blur(3px);  
+}
+
+.dot4{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(95, 132,143);
+    left: 60%;
+    filter: blur(3px);  
+}
+
+.dot5{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(156, 174,175);
+    left: 80%;
+    filter: blur(3px);  
+}
+
+.dot6{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(184, 210,201);
+    left: 5%;
+    filter: blur(3px);  
+}
+
+.dot7{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(56, 88,116);
+    left: 8%;
+    filter: blur(3px);  
+}
+.dot8{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: rgb(91, 137,142);
+    left: 20%;
+    filter: blur(3px);  
+}
+
+.dot9{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(168, 183,169);
+    left: 40%;
+    filter: blur(3px);  
+}
+
+.dot10{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(184, 210,201);
+    left: 65%;
+    filter: blur(3px);  
+}
+
+.dot11{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(56, 88,116);
+    left: 70%;
+    filter: blur(3px);  
+}
+.dot12{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: rgb(91, 137,142);
+    left: 85%;
+    filter: blur(3px);  
+}
+
+.dot13{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(168, 183,169);
+    left: 90%;
+    filter: blur(3px);  
+}
+
+
+

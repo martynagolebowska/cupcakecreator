@@ -90,6 +90,8 @@ jQuery(document).ready(function(){
     
     spoonSelect.on('click', function(){
         
+        console.log('działaj mi');
+        
         var flav = jQuery(this).next('.spoonTop').data('flavour');
         
         cupcakeFilling.removeClass('cherry');
@@ -203,8 +205,13 @@ jQuery(document).ready(function(){
     
     recBtn.on('click', function(){
         
+        //pokazanie i przeskoczenie do sekcji 5 po kliknięciu
+        
         section5.show();
         
+        var recBoxOffset = jQuery('.RecBox').offset();
+        
+        jQuery('html, body').animate({scrollTop: recBoxOffset.top}, 1000);
         
         //copy the created cupcake from prev section
         var cupcakeToClone = jQuery('.section3').find('.frostingCupcake');
@@ -224,46 +231,84 @@ jQuery(document).ready(function(){
 
 // Dodanie animacji
     
-var sec1tit = jQuery('.section1-title')
-  
-setTimeout(function(){
+var sec1tit = jQuery('.section1-title').hide();
 
 var waypoint = new Waypoint({
-    element: sec1tit,
-    offset:'40%',
+    element: jQuery('.section1'),
+    offset:'50%',
     handler: function(direction) {
-        sec1tit.addClass('bounceInRight');
+        sec1tit.show().addClass('bounceInRight');
     }
 })
+
+var sec2tit = jQuery('.section2-title').hide();
     
 var waypoint1 = new Waypoint({
-    element: jQuery('.section2-title'), 
-    offset:'60%',
+    element: jQuery('.section2'), 
+    offset:'50%',
     handler: function(direction) {
-        jQuery('.section2-title').addClass('bounceInLeft');
+        sec2tit.show().addClass('bounceInLeft');
     }
 })
 
 var spoonBox = jQuery('.spoonBox').hide();
 
 var waypoint2 = new Waypoint({
-    element: jQuery('.section2-title'), 
-    offset:'40%',
+    element: jQuery('.section2'), 
+    offset:'70%',
     handler: function(direction) {
         spoonBox.show().addClass('fadeInUp');
     }
 })
 
+var sec3tit = jQuery('.section3-title').hide();
+var circBox = jQuery('.circleBox').hide();
+
 var waypoint3 = new Waypoint({
-    element: jQuery('.section3-title'), 
-    offset:'40%',
+    element: jQuery('.section3'), 
+    offset:'50%',
     handler: function(direction) {
-        console.log('hello');
-        jQuery('.section3-title').addClass('bounceInRight');
-        jQuery('.circleBox').addClass('fadeInUp');
+
+        sec3tit.show().addClass('bounceInRight');
+        circBox.show().addClass('bounceInLeft');
     }
 })
+
+var scrolltop = window.pageYOffset;
     
-  },3000);
+    console.log(scrolltop);
+
+// tło w kropki z parallax
+    
+function parallax(){
+    var scrolled = $(window).scrollTop();
+    
+    $('.paralex').css('top', +(scrolled * 0.4) + 'px');
+}
+    
+$(window).scroll(function(e){
+    parallax();
+});
+    
+function parallax1(){
+    var scrolled = $(window).scrollTop();
+    
+    $('.paralex1').css('top', +(scrolled * 0.3) + 'px');
+}
+    
+$(window).scroll(function(e){
+    parallax1();
+});
+    
+function parallax2(){
+    var scrolled = $(window).scrollTop();
+    
+    $('.paralex2').css('top', +(scrolled * 0.2) + 'px');
+}
+    
+$(window).scroll(function(e){
+    parallax2();
+});
+
     
 });
